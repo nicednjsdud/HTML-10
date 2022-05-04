@@ -4001,3 +4001,12 @@ java.lang.Exception: Resource '/HTML5/src/main/webapp/tags/form.html' does not e
 	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:588)
 	at org.eclipse.lsp4e.ConnectDocumentToLanguageServerSetupParticipant$2.run(ConnectDocumentToLanguageServerSetupParticipant.java:75)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-05-04 11:36:58.928
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 264, state before: 10 after: 4
+
+!ENTRY org.eclipse.wst.sse.ui 2 0 2022-05-04 15:15:29.046
+!MESSAGE The ''org.eclipse.wst.css.ui.proposalComputer.css'' proposal computer from the ''org.eclipse.php.ui'' plug-in did not complete normally. The extension violated the API contract of the ''computeContextInformation()'' operation.
+
+!ENTRY org.eclipse.wst.sse.ui 2 0 2022-05-04 15:15:29.046
+!MESSAGE The ''org.eclipse.wst.css.ui.proposalComputer.cssTemplates'' proposal computer from the ''org.eclipse.php.ui'' plug-in did not complete normally. The extension violated the API contract of the ''computeContextInformation()'' operation.

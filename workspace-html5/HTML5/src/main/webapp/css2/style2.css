@@ -1,1 +1,46 @@
 @charset "UTF-8";
+* {
+	color : red;
+}
+
+li {
+	color : blue;
+}
+
+#orange {
+	color : orange;
+}
+
+.orange1 {
+	color : aqua;
+}
+
+.myclass {
+	background-color: cadetblue;
+}
+
+span.orange1 {
+	color : pink;
+}
+
+ul > .orange1 {
+	color : Lime;
+}
+
+div .orange1 {
+	background-color: yellow; 
+}
+
+.orange1 + li {
+	color : olive;
+}
+
+.orange1 ~ li {
+	color : purple;
+}
+
+
+
+
+
+
