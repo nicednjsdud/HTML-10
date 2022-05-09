@@ -5044,3 +5044,12 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-05-09 11:02:19.514
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 266, state before: 10 after: 4
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-05-09 11:43:09.723
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 641, state before: 10 after: 4
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-05-09 16:45:51.085
+!MESSAGE [Log]	Scanner.scan has not advanced at offset 420, state before: 10 after: 4
