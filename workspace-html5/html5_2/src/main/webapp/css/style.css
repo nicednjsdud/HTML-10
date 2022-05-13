@@ -1,9 +1,6 @@
 @charset "UTF-8";
 	
-	header { height: 130px;}
 		
-		aside { width: 220px; height: 300px; float: left;} 
-		footer{clear: both; height: 120px;}
 		* { margin:0; 
 			padding:0; 
 			box-sizing: border-box; 
