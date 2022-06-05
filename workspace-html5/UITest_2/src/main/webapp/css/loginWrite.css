@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+		header{
+			text-align: left;
+		}
+		.loginfrm{
+			border: 1px solid black;
+			position: relative;
+			width: 700px;
+			height: 330px;
+
+		}
+		#class{
+			margin-top: 30px;
+			height : 120px;
+			display: flex;
+            justify-content: center;
+			clear:both;
+		}
+		#class input {
+		
+			display: flexbox;
+			clear: both;
+			
+		}
+		#loginbox1{
+			float:left;
+			padding : 10px;
+		}
+		#loginbox1 input {
+			background-color: rgb(224, 224, 224);
+			border-color:rgb(224, 224, 224);
+		}
+		#loginbox2{
+			display: inline-block;
+		}
+		#loginInput{
+			
+			margin-top: 10px;
+			width: 50px;
+			height: 50px;
+			background-color: yellowgreen;
+			color: white;
+			border-color: yellowgreen;
+			
+		}
+	
+		#MemberInfo{
+			border-top: 1px solid black;
+			text-align: left;
+			background-color: rgb(224, 224, 224);
+			height :179px;
+		}
+		#footer{
+		
+			margin-top: 30px;
+			margin-left: 300px;
+		}
+		#joinfind {
+			float: right;
+			margin-right: 30px;
+		}
+		#findmember{
+			background-color: yellowgreen;
+			color: white;
+			border-color: yellowgreen;
+		}
+		a{ color: #000; text-decoration: none;}

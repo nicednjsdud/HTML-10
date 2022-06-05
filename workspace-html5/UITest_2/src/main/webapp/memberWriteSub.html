@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>회원가입약관</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+		
+	
+		function check_valid(){
+		let joinAgree = document.joinAgree
+		if($("#save_check").is(":checked")==false){
+			alert("회원가입약관에 동의하셔야 가입 하실 수 있습니다.")
+			$("#save_check").focus()
+			return
+		}
+		else if($("#save_check2").is(":checked")==false){
+			alert("개인정보처리방침안내의 내용에 동의하셔야 가입 하실 수 있습니다.")
+			$("#save_check2").focus()
+			return
+		}
+		else{
+			joinAgree.method= "post"
+			joinAgree.action = "joinIntro.html"
+			joinAgree.submit()
+		}
+
+	}
+		
+	</script>
+	<style>
+		* {
+			width:auto;
+			height:auto;
+		}
+		
+		#agreeRed{
+			text-align: center;
+			font-size: 0.6em;
+			color:red;
+		}
+		.agreeInfohead{
+			text-align: center;
+			font-size: 0.8em;
+		}
+		
+		textarea{
+			overflow-y: scroll;
+			resize: none;
+			margin: 0 auto 0;
+			width:100%;
+			background-color: rgb(224, 224, 224);
+			font-size: 0.6em;
+		}
+		.agreefontbold{
+			font-size: 0.4em;
+		}
+		.agreecheck{
+			margin : -10px;
+			text-align: right;
+		}
+		#joinbtncenter{
+			text-align: center;
+		}
+		#joinintro{
+			margin-top: 20px;
+			background-color: yellowgreen;
+			color: white;
+			border-color: yellowgreen;
+		}
+	</style>
+
+</head>
+<body>
+	<form action="" name="joinAgree" method="post" enctype="utf-8">
+	<header>
+		<h3>회원가입약관</h3>
+	</header>
+	<p id="agreeRed">회원가입 약관 및 개인정보처리방침안내의 내용에 동의하셔야 회원가입하실 수 있습니다.</p>
+	<h4 class="agreeInfohead">회원가입 약관</h4>
+	<div class="agreefontbold">
+	<p ><textarea readonly="readonly" id="text_val1" cols="120" rows="15" name="join"  ></textarea></p>
+	<p class="agreecheck">회원가입약관에 동의합니다.<input id="save_check" type="checkbox" name="save_check" value="Y" tabindex="1" /></p>
+	</div>
+	<h4 class="agreeInfohead">개인정보처리방침안내</h4>
+	<div class="agreefontbold">
+	<p><textarea readonly="readonly" id="text-val2" cols="120" rows="15" name="join"></textarea></p>
+	<p class="agreecheck">개인정보처리방침안내의 내용에 동의합니다.<input id="save_check2" type="checkbox" name="save_check2" value="Y" tabindex="2" /></p>
+	</div>
+	<div id="joinbtncenter">
+		<input id="joinintro" type="submit" value="회원가입" onclick="check_valid()"/>
+	</div>
+	</form>
+</body>
+</html>

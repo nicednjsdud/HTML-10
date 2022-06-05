@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>로그인 화면</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/loginWrite.css">
+	<script>
+		$("[autofocus]").focus()
+
+		function valid(){
+			let frmLogin=document.frmLogin
+			let user_id=frmLogin.user_id.value
+			let user_pw=frmLogin.user_pw.value
+
+			if(user_id==""){
+				alert("아이디를 입력해주세요.")
+				suser_id.focus()
+				return
+			}
+			else if(user_id.indexOf(" ")>=0){
+				alert("아이디에는 공백이 들어가면 안됩니다.")
+				user_id.focus()
+				return
+			}
+			else if(user_pw==""){
+				alert("비밀번호를 입력해주세요.")
+				user_pw.focus()
+				return
+			}
+			else if(user_pw.indexOf(" ")>=0){
+				alert("비밀번호에는 공백이 들어가면 안됩니다.")
+				user_pw.focus()
+				return
+			}
+			else{
+					frmLogin.method="post"
+					frmLogin.action="mypage.html"
+					frmLogin.submit()
+			}
+		}
+	</script>
+
+</head>
+
+<body>
+	
+	<header>
+		<h3>로그인</h3>
+	</header>	
+	<div class="loginfrm">
+		
+	<form action="" name="frmLogin" method="post" enctype="utf-8" >
+		<div id="class">
+		<div id="loginbox1">
+		회원 아이디  <input type="text" name="user_id" autofocus tabindex="1"/><br>
+		비밀번호 &nbsp;&nbsp;&nbsp; <input type="password" name="user_pw" tabindex="2"/><br>
+		<input type="checkbox" name="save_check" value="Y" tabindex="3" />자동로그인</input>
+		</div>
+		<div id="loginbox2">
+		<input id = "loginInput" type="submit" value="로그인" tabindex="4" onclick="valid()" />
+		</div>	
+	</div>	
+	</form>	
+		<div id="MemberInfo">
+			<h4>회원 로그인 안내</h4>
+	
+		<p>회원아이디 및 비밀번호가 기억 안나실 때는 아이디/비밀번호 찾기를 이용하십시요.</p>
+		<p>아직 회원이 아니시라면 회원으로 가입 후 이용해 주십시요.</p>
+		
+		<div id="joinfind">
+			
+			<input id="findmember" type="button" value="아이디 비밀번호 찾기" onclick="self.location='findMemberInfo.html'" tabindex="5" />
+			<input id="join" type="button" value="회원가입" onClick="self.location='memberWriteSub.html'" tabindex="6" /> 
+		</div>
+	</div>
+	</div>
+	<footer id="footer">
+		<a href="mypage.html" tabindex="7">메인으로 돌아가기</a>
+	</footer>
+</body>
+</html>

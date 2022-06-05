@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>쪽지보내기</title>
+	<script>
+		function sendvalid(){
+			let sendmessage=document.sendmessage
+			let user_id=sendmessage.user_id.value
+			let sendInfo=sendmessage.sendInfo.value
+
+			if(user_id==""){
+				alert("아이디을 입력해주세요.")
+				user_id.focus()
+				return
+			}
+			else if(user_id.indexOf(" ")>=0){
+				alert("아이디에는 공백이 들어가면 안됩니다.")
+				user_id.focus()
+				return
+			}
+			else if(sendInfo==""){
+				alert("내용을 입력해 주세요.")
+				sendInfo.focus()
+				return
+			}
+			else{
+					sendmessage.method="post"
+					sendmessage.action="messageBox.html"
+					sendmessage.submit()
+			}
+		}
+	</script>
+<style>
+#messageBoxhead{
+	margin : 30px 0 20px 30px;
+}
+.messageBoxcate{
+	display: inline-block;
+	width:100%;
+	padding : 10px 0 10px 0;
+}
+#messageBoxbtn{
+	background-color: black;
+	height: 50px;
+	width:100%;
+	margin: 10px ;
+}
+.messageBoxcolor{
+	background-color: black;
+	color: white;
+	font-size: 1.1em;
+	margin: 10px;
+}
+#messagesendhead{
+	margin: 10px 0 0 30px;
+	width: 100%;
+	padding-bottom: 10px;
+	border-bottom: 3px solid black;
+}
+.sendText{
+	width:100%;
+	margin: 0 10px 0px 30px;
+	border-bottom: 1px solid gray;
+}
+#sendRow1{
+	display: inline-block;
+	height:70px;
+	width:15%;
+	background-color: rgb(224, 224, 224);
+	padding: 20px 0 30px 10px;
+	font-weight: bold;
+}
+#sendRow2{
+	display: inline-block;
+	width: 40%;
+	font-size: 0.8em;
+	margin:0;
+}
+
+.sendText input{
+	width: 300px;
+	height: 30px;
+	background-color: rgb(224, 224, 224);
+}
+#sendRow3{
+	display: inline-block;
+	height:120px;
+	width: 15%;
+
+	padding: 50px 0 30px 10px;
+	font-weight: bold;
+	background-color: rgb(224, 224, 224);
+}
+#sendRow4{
+	display: inline-block;
+	
+}
+.sendText textarea{
+	background-color: rgb(224, 224, 224);
+}
+#sendmessageResult{
+	margin-top: 10px;
+	width: 100%;
+	text-align: center;
+}
+#sendMessage{
+	width:120px;
+	height:30px;
+	background-color: yellowgreen;
+	border: 1px solid yellowgreen;
+	color:white;
+	border-radius: 5px;
+}
+#resetSendMessage{
+	width:60px;
+	height:30px;
+	background-color: darkslategrey;
+	color: white;
+	border-color:darkslategrey;
+}
+
+
+
+</style>
+
+</head>
+<body>
+	<h3 id="messageBoxhead">쪽지 보내기</h3>
+	<div class="messageBoxcate">
+		<div id="messageBoxbtn">
+			<input class="messageBoxcolor" type="button" value="받은쪽지" onclick="location.href='giveMessageBox.html'" />
+			<input class="messageBoxcolor" type="button" value="보낸쪽지" onclick="location.href='sendMessageBox.html'" />
+			<input class="messageBoxcolor" type="button" value="쪽지쓰기" onclick="location.href='sendMessage.html'" />			
+		</div>
+	<form action="" name="sendmessage" method="post" enctype="utf=8">
+		<h3 id="messagesendhead">쪽지쓰기</h3>
+		<div class="sendText">
+			<div id="sendRow1" >받는 회원아이디</div>
+			<div id="sendRow2"><input type="text" name="user_id" /><p id="heplerText">여러회원에게 보낼때는 컴마(,)로 구분하세요.</p></div>
+		</div>
+		<div class="sendText">
+			<div id="sendRow3">내용</div>
+			<div id="sendRow4"><textarea  cols="70" rows="7" name="sendInfo"></textarea></div>
+		</div>
+		<div id="sendmessageResult">
+		<input id="sendMessage"type="submit" name="sendToPeople" value="보내기"onclick="sendvalid()"/>
+		<input id="resetSendMessage" type="button" name="reset" value="창닫기" />
+		</div>
+	</form>
+	
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>마이페이지</title>
+<style>
+* {
+	margin : 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+#mypage_head{
+	margin : 10px 0 10px 60px;
+	text-align: left;
+	display: inline-block;
+}
+#mypage_head2{
+	margin: 20px 0 10px 20px;
+	text-align: left;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+li {list-style-type: none;}
+#top_menu{
+	float:right; 
+	text-align: right;
+	margin: 5px 10px 10px ;
+	}
+#top_menu input{
+	display: inline-block;
+	
+	padding: 3px;
+	font-size: 0.8em;	
+}
+#top_menu #messageBox{
+	border: 1px solid yellowgreen;
+	color:yellowgreen;
+	background-color: white;
+}
+#top_menu #modify{
+	border: 1px solid yellowgreen;
+	color:yellowgreen;
+	background-color: white;
+}
+#top_menu #leave{
+	background-color: yellowgreen;
+	border: 1px solid yellowgreen;
+	color:white
+}
+#mypage_info{
+	display:table; 
+	width:100%;
+	margin : 0 20px 0 20px;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+.row{display:table-row}
+.cell{
+	display:table-cell;
+	padding: 3px; 
+	border-bottom: 1px solid black;
+	background-color: lightskyblue;
+	border-top: 1px solid black;
+}
+.c1{width: 15%; border-left: 1px solid black;} 
+.c2{width: 35%;}
+.c3{width: 15%;}
+.c4{width: 35%;border-right: 1px solid black;}
+
+.cell2{
+	display:table-cell;
+	padding: 0 20px 0 20px; 
+	background-color: rgb(224, 224, 224);
+	border-color:rgb(224, 224, 224);
+	text-align: center;
+	border-top: 1px solid black;
+	border-bottom: 1px solid gray;
+}
+.cA{width: 16%;}
+.cB{width: 16%;}
+.cC{width: 16%;}
+.cD{width: 16%;}
+.cE{width: 16%;}
+.cF{width: 16%;}
+.cG{width: 15%;}
+.cX{width: 39%;}
+.cW{width: 55%;}
+.cZ{width: 55%;}
+#reserve{
+	width:100%;
+	text-align: center;
+	margin-top: 100px;
+	height: 80px;
+	border-bottom: 1px dashed grey;
+}
+#keep{
+	width:100%;
+	text-align: center;
+	margin-top: 100px;
+	height: 120px;
+	border-bottom: 1px dashed grey;
+}
+
+</style>
+</head>
+<body>
+	<header>
+		<h3 id="mypage_head">마이페이지</h3>
+		<div id="top_menu">
+				<input  id="messageBox" type="button" value="쪽지함" onclick="self.location='messageBox.html'" /> 
+				<input id="modify" type="button" value="회원정보수정" onclick="self.location='modify.html'"/>
+				<input id="leave" type="button" value="회원탈퇴" onclick="self.location='leave.html'" /> 
+		</div>
+	</header>
+	<section>
+		<div id="mypage_info">
+		<div class="row">
+		<span class="cell c1">보유포인트</span>
+		<span class="cell c2">1,100점</span>
+		<span class="cell c3">보유쿠폰</span>
+		<span class="cell c4">1</span>
+		</div>
+		<div class="row">
+			<span class="cell c1">연락처</span>
+			<span class="cell c2">미등록</span>
+			<span class="cell c3">E-mail</span>
+			<span class="cell c4">nicednjsdud@naver.com</span>
+		</div>
+		<div class="row">
+			<span class="cell c1">최종접속일시</span>
+			<span class="cell c2">2022-03-10 00:05:52</span>
+			<span class="cell c3">회원가입일시</span>
+			<span class="cell c4">2021-09-26 21:33:16</span>
+		</div>
+		<div class="row">
+			<span class="cell c1">주소</span>
+			<span class="cell c2">0</span>
+			<span class="cell c3">&nbsp</span>
+			<span class="cell c4">&nbsp</span>
+		</div>
+		</div>
+	</section>
+			<h3 id="mypage_head2">최근 예약 내역</h3>
+		<section>
+			<div class="mypage_info">
+			<div class="row">
+				<span class="cell2 cA">예약번호</span>
+				<span class="cell2 cB">예약일시</span>
+				<span class="cell2 cC">상품수</span>
+				<span class="cell2 cD">예약금액</span>
+				<span class="cell2 cE">입금액</span>
+				<span class="cell2 cF">미입금액</span>
+				<span class="cell2 cG">상태</span>
+			</div>
+		</div>
+			<div id="reserve">
+				<p id="reserve_main">예약 내역이 없습니다.</p>
+			</div>
+			<h3 id="mypage_head2">최근 위시 리스트</h3>
+			<div class="mypage_info">
+			<div class="row">
+				<span class="cell2 cW">이미지</span>
+				<span class="cell2 cX">상품명</span>
+				<span class="cell2 cZ">보관일시</span>
+			</div>
+			</div>
+			<div id="keep">
+				<p id="keep_main">보관 내역이 없습니다.</p>
+			</div>
+		</section>
+		
+	
+</body>
+</html>
